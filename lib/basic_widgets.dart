@@ -12,7 +12,7 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only( bottom: 8.0),
+      padding: const EdgeInsets.only( bottom: 4.0),
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
@@ -24,15 +24,17 @@ class MainButton extends StatelessWidget {
               fontFamily: 'Consolas',
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.black,
               ),
            // textAlign: TextAlign.start,
             ),
           ),
           style: ButtonStyle(
             alignment: Alignment.bottomLeft,
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.black45),
+            backgroundColor: MaterialStateProperty.all<Color?>(Colors.grey[50]),
             shadowColor: MaterialStateProperty.all<Color>(Colors.black),
+            elevation: MaterialStateProperty.all<double?>(12),
+            overlayColor: MaterialStateProperty.all<Color?>(Colors.grey[500]),
             )
           ),
       ),

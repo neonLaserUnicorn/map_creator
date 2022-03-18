@@ -27,9 +27,12 @@ class MenuColumn extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        MainButton(text: 'Новая карта', onPressed: (){},),
+        MainButton(text: 'Новая карта', onPressed: (){
+          Navigator.of(context).pushNamed('/map');
+        },),
         MainButton(text: 'Загрузить карту', onPressed: (){},),
         MainButton(text: 'Настройки', onPressed: (){},),
+        MainButton(text: 'Выход', onPressed: (){},),
         const SizedBox(height: 24.0,),
       ],
       );
